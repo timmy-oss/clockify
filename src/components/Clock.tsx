@@ -38,6 +38,16 @@ export default function () {
     <div className="mx-auto w-full mt-[150px] flex flex-row justify-center items-center">
       <div className="w-[80%] h-[325px] flex  flex-col justify-center items-center     ">
         <div className=" w-full  mx-auto  rounded-3xl  flex flex-col justify-center items-center ">
+          <div className="py-4 pb-12">
+            <img
+              alt="clockify logo"
+              src="/logo.png"
+              width="200px"
+              height="auto"
+              className="rounded-3xl"
+            />
+          </div>
+
           <div className="">
             <i className="bi-clock-fill text-9xl text-black/60"></i>
           </div>

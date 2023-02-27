@@ -4,19 +4,18 @@ import Stopwatch from "./components/Stopwatch";
 import Timer from "./components/Timer";
 import Clock from "./components/Clock";
 
-type LAP = Array<{
+type LAP = {
   hStr: string;
   mStr: string;
   sStr: string;
-}>;
+};
 
 function App() {
   const [activeBtn, setActiveBtn] = useState(1);
 
   // Stopwatch states
   const [counter, setCounter] = useState(0);
-  const [laps, setLaps] = useState([] as unknown as [LAP]);
-  const [startCounter, setStartCounter] = useState(false);
+  const [laps, setLaps] = useState([] as unknown as LAP[]);
 
   // Timer States
 

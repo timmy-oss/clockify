@@ -1,11 +1,11 @@
 import cn from "classnames";
 import { useEffect, useState } from "react";
 
-type LAP = Array<{
+type LAP = {
   hStr: string;
   mStr: string;
   sStr: string;
-}>;
+};
 
 export default function Stopwatch(props: {
   counter: number;
@@ -135,10 +135,7 @@ export default function Stopwatch(props: {
               })
             }
           >
-            <h2
-              style={{ fontFamily: "Exo 2" }}
-              className="text-black tracking-wider text-center p-4 text-4xl  2xl:text-5xl"
-            >
+            <h2 className="text-black tracking-wider text-center p-4 text-4xl  2xl:text-5xl">
               {h > 0 && (
                 <>
                   <span> {hStr}</span>:

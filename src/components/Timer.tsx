@@ -1,6 +1,12 @@
 import cn from "classnames";
 import React, { useState, useEffect } from "react";
 
+type formStateType = {
+  h: number;
+  m: number;
+  s: number;
+};
+
 function AddTimerForm(props: {
   closeForm: React.MouseEventHandler<HTMLButtonElement>;
   sendTimer: (formState: { h: number; m: number; s: number }) => void;
@@ -134,7 +140,7 @@ export default function (props: {
   }
 
   function sendTimer(formState: { h: number; m: number; s: number }) {
-    setTimers((prevState) => [...prevState, formState]);
+    setTimers((prevState: formStateType[]) => [...prevState, formState]);
 
     let s = +formState.s || 0;
     let m = +formState.m || 0;
@@ -142,7 +148,7 @@ export default function (props: {
 
     // console.log(h, m, s);
 
-    setTimerStates((prevState) => [
+    setTimerStates((prevState: formStateType[]) => [
       ...prevState,
       {
         id: timers.length,
