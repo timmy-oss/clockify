@@ -198,7 +198,7 @@ export default function (props: {
       {showForm && <AddTimerForm sendTimer={sendTimer} closeForm={hideForm} />}
 
       {!showForm && (
-        <div className="text-center z-[2] shadow absolute  right-8 top-[80%]   rounded-full ">
+        <div className="text-center z-[2] shadow absolute  right-8 top-[700px] md:top-[600px]   rounded-full ">
           <button
             onClick={toggleForm}
             className={cn({
@@ -211,7 +211,7 @@ export default function (props: {
         </div>
       )}
 
-      <div className="space-y-6 w-[90%]  mx-auto pt-8 pb-4 no-scrollbar overflow-y-auto   ">
+      <div className="space-y-6 w-[90%]  mx-auto pt-8 pb-4  overflow-y-scroll  min-h-full ">
         {timers.length === 0 && (
           <p className=" mt-[30%] text-center text-xl  px-2 text-gray-500">
             No timers added yet. Click on the button below to add a new timer.
