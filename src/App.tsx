@@ -59,8 +59,8 @@ function App() {
 
   return (
     <div className=" bg-[#EEF1FB] min-h-screen fixed w-full">
-      <main className="max-w-xl fixed  mx-auto top-0 botttom-0 left-0 right-0 w-full  border border-black/20 bg-[#F7F9FF] min-h-screen py-2">
-        <div className="flex flex-row mx-auto text-black/50 pt-4 w-[90%] justify-around items-center">
+      <main className="max-w-xl fixed  mx-auto top-0 botttom-0 left-0 right-0 w-full  border border-black/20 bg-[#F7F9FF] min-h-screen">
+        <div className="flex flex-row mx-auto py-4 text-black/50  w-[90%] justify-around items-center">
           {contextButtons.map((btn, i) => {
             return (
               <button
