@@ -110,7 +110,7 @@ export default function Stopwatch(props: {
     <>
       <div
         className={
-          "w-[340px] h-[340px] flex flex-col justify-center items-center mx-auto mt-8 rounded-full  shadow-md border " +
+          "w-[320px] h-[320px] lg:w-[340px] lg:h-[340px] flex flex-col justify-center items-center mx-auto mt-8 rounded-full  shadow-md border " +
           cn({
             " border-t-red-500  border-r-yellow-500 border-b-green-500 border-l-blue-500 ":
               seconds % 2 === 0,
@@ -119,7 +119,7 @@ export default function Stopwatch(props: {
       >
         <div
           className={
-            "w-[325px] h-[325px]  flex  flex-col justify-center items-center   rounded-full  border-4 border-dashed " +
+            "w-[305px] h-[305px]  lg:w-[325px] lg:h-[325px]  flex  flex-col justify-center items-center   rounded-full  border-4 border-dashed " +
             cn({
               " border-t-red-500  border-r-yellow-500 border-b-green-500 border-l-blue-500 ":
                 false,
@@ -128,7 +128,7 @@ export default function Stopwatch(props: {
         >
           <div
             className={
-              "w-[300px] h-[300px] border mx-auto  rounded-full shadow-md flex flex-col justify-center items-center " +
+              " w-[280px] h-[280px] lg:w-[300px] lg:h-[300px] border mx-auto  rounded-full shadow-md flex flex-col justify-center items-center " +
               cn({
                 " border-t-red-500  border-r-yellow-500 border-b-green-500 border-l-blue-500 ":
                   seconds % 2 !== 0,
@@ -160,7 +160,7 @@ export default function Stopwatch(props: {
 
       {/* Laps */}
 
-      <div className="flex flex-row pb-2 px-2  min-h-[120px] overflow-x-scroll no-scrollbar space-x-4 justify-between mx-auto w-[90%] pt-8 items-center">
+      <div className="flex flex-row pb-2 px-2  overflow-x-scroll no-scrollbar space-x-4 justify-between mx-auto w-[90%] pt-8 items-center">
         {laps
           .concat()
           .reverse()
@@ -168,7 +168,7 @@ export default function Stopwatch(props: {
             return (
               <div
                 key={i}
-                className="flex-1 min-w-[40%]  text-center relative min-h-[100px] shadow bg-white rounded-3xl"
+                className="flex-1 min-w-[70%] lg:min-w-[40%]  text-center relative min-h-[100px] shadow bg-white rounded-3xl"
               >
                 <i
                   onClick={() => {

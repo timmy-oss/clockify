@@ -34,8 +34,8 @@ function AddTimerForm(props: {
 
   return (
     <>
-      <div className="absolute top-0 right-0 left-0 bottom-0 bg-black/70"></div>
-      <div className="absolute z-[2] top-8 left-0 right-0 mx-auto w-[80%] lg:w-[65%] bg-white rounded p-4 px-6 ">
+      <div className="absolute top-0 right-0 left-0 bottom-0 blur bg-black/40"></div>
+      <div className="absolute z-[2] top-[15%] left-0 right-0 mx-auto w-[80%] lg:w-[65%] bg-white rounded p-4 px-6 ">
         <div className="">
           <legend className="text-center py-4  text-xl  capitalize">
             Add new timer
@@ -194,12 +194,12 @@ export default function (props: {
   }
 
   return (
-    <div className="relative">
+    <div className=" ">
       {showForm && <AddTimerForm sendTimer={sendTimer} closeForm={hideForm} />}
 
-      <div className="space-y-6 w-[90%]  mx-auto mt-8 no-scrollbar overflow-y-auto h-[70vh]  ">
+      <div className="space-y-6 w-[90%]  mx-auto pt-8 no-scrollbar overflow-y-auto min-h-screen  ">
         {timers.length === 0 && (
-          <p className="relative top-32 text-center text-xl  px-8 text-gray-500">
+          <p className=" mt-[30%] text-center text-xl  px-2 text-gray-500">
             No timers added yet. Click on the button below to add a new timer.
           </p>
         )}
@@ -269,17 +269,19 @@ export default function (props: {
         })}
       </div>
 
-      <div className=" text-2xl text-center  mx-auto w-[60%] pt-4 ">
-        <button
-          onClick={toggleForm}
-          className={cn({
-            " transition-colors w-full bg-black hover:bg-black/90 text-white uppercase flex-1 duration-300 px-6 py-6  rounded-[60px]":
-              true,
-          })}
-        >
-          Add
-        </button>
-      </div>
+      {!showForm && (
+        <div className=" z-[4] text-center absolute  right-8 bottom-[13%]   rounded-full ">
+          <button
+            onClick={toggleForm}
+            className={cn({
+              " transition-colors  bg-black hover:bg-black/90 text-white uppercase  duration-300 px-4 py-3  rounded-full":
+                true,
+            })}
+          >
+            <i className="bi-plus text-4xl"></i>
+          </button>
+        </div>
+      )}
     </div>
   );
 }
