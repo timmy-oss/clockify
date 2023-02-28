@@ -194,10 +194,24 @@ export default function (props: {
   }
 
   return (
-    <div className=" ">
+    <div className="min-h-screen ">
       {showForm && <AddTimerForm sendTimer={sendTimer} closeForm={hideForm} />}
 
-      <div className="space-y-6 w-[90%]  mx-auto pt-8 no-scrollbar overflow-y-auto min-h-screen  ">
+      {!showForm && (
+        <div className="text-center z-[2] shadow absolute  right-8 top-[80%]   rounded-full ">
+          <button
+            onClick={toggleForm}
+            className={cn({
+              " transition-colors  bg-black hover:bg-black/90 text-white uppercase  duration-300 px-4 py-3  rounded-full":
+                true,
+            })}
+          >
+            <i className="bi-plus text-4xl"></i>
+          </button>
+        </div>
+      )}
+
+      <div className="space-y-6 w-[90%]  mx-auto pt-8 pb-4 no-scrollbar overflow-y-auto   ">
         {timers.length === 0 && (
           <p className=" mt-[30%] text-center text-xl  px-2 text-gray-500">
             No timers added yet. Click on the button below to add a new timer.
@@ -268,20 +282,6 @@ export default function (props: {
           );
         })}
       </div>
-
-      {!showForm && (
-        <div className=" z-[4] text-center absolute  right-8 bottom-[13%]   rounded-full ">
-          <button
-            onClick={toggleForm}
-            className={cn({
-              " transition-colors  bg-black hover:bg-black/90 text-white uppercase  duration-300 px-4 py-3  rounded-full":
-                true,
-            })}
-          >
-            <i className="bi-plus text-4xl"></i>
-          </button>
-        </div>
-      )}
     </div>
   );
 }
