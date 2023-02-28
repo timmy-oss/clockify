@@ -1,4 +1,6 @@
 # Clockify
+![logo](https://user-images.githubusercontent.com/82800805/221722490-03ee130c-b5f8-42b7-93f4-41eb13789942.png)
+
 
 Clockify is a react-powered three-in-one time keeping application. It features a timer, a stopwatch and a clock rolled into one.
 
