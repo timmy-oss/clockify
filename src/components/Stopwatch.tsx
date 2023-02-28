@@ -200,7 +200,7 @@ export default function Stopwatch(props: {
 
       {/* Start and Resets  */}
 
-      <div className="flex flex-row z-[2] absolute right-0 left-0 top-[80vh] text-2xl text-center space-x-4  md:space-x-8 justify-around mx-auto w-[90%] pt-8 items-center">
+      <div className="flex flex-row z-[2] absolute right-0 left-0 top-[75vh] text-2xl text-center space-x-4  md:space-x-8 justify-around mx-auto w-[90%] pt-8 items-center">
         <button
           onClick={counterControl}
           className={cn({
