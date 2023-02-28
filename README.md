@@ -4,6 +4,7 @@ Clockify is a react-powered three-in-one time keeping application. It features a
 
 > Designed with love using `react`, and `tailwindcss`.
 
+> Live Preview [here](https://clockify-sable.vercel.app).
 
 > Preview
 
