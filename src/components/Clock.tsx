@@ -3,10 +3,10 @@ import { useEffect, useState } from "react";
 export default function () {
   const [dateTime, setDateTime] = useState(new Date());
 
-  let h = "" + dateTime.getHours();
-  let m = "" + dateTime.getMinutes();
-  let s = "" + dateTime.getSeconds();
-  let ms = "" + dateTime.getMilliseconds();
+  let h = String(dateTime.getHours());
+  let m = String(dateTime.getMinutes());
+  let s = String(dateTime.getSeconds());
+  let ms = String(dateTime.getMilliseconds());
 
   if (h.length == 1) {
     h = "0" + h;
@@ -53,8 +53,7 @@ export default function () {
           </div>
 
           <div className="text-black/70  flex flex-row space-x-8 text-center px-4 py-6 text-4xl  2xl:text-5xl">
-            <span> {h}</span> &nbsp;: <span>{m}</span> &nbsp;:
-            <span> {s} </span>
+            <span>{h}</span>&nbsp;:<span>{m}</span>&nbsp;:<span>{s}</span>
             {!(+h < 1 || +h > 11) && <span> AM </span>}
           </div>
         </div>
@@ -63,7 +62,7 @@ export default function () {
           {new Date().toDateString()}
         </div>
 
-        <div className="flex flex-row -space-x-4 ">
+        <div className="flex flex-row -space-x-4 scale-[0.8] md:scale[1]">
           <div className="w-full flex flex-row items-center justify-center animate-spin rounded mt-16 mx-auto">
             <i className="text-8xl bi-nut-fill "></i>
           </div>
